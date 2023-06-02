@@ -1,0 +1,114 @@
+﻿@model VerstaTask.Models.Dtos.OrderDto
+
+
+<form>
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Информация о заказе</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <label asp-for="Id" class="control-label pt-2" style="font-size:20px;">ID заказа</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Id" disabled class="form-control" />
+            </div>
+            
+            <br />
+            <h3 class="text-primary">Отправитель</h3>
+            <div class="col-2">
+                <label asp-for="SenderCity" class="control-label pt-2" style="font-size:20px;">Город</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="SenderCity" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="SenderStreet" class="control-label pt-2" style="font-size:20px;">Улица</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="SenderStreet" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="SenderHouseNumber" class="control-label pt-2" style="font-size:20px;">Номер дома</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="SenderHouseNumber" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="SenderCaseNumber" class="control-label pt-2" style="font-size:20px;">Корпус</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="SenderCaseNumber" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="SenderFlatNumber" class="control-label pt-2" style="font-size:20px;">Квартира</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="SenderFlatNumber" disabled class="form-control" />
+            </div>
+
+            <br />
+            <h3 class="text-primary">Получатель</h3>
+            <div class="col-2">
+                <label asp-for="RecipientCity" class="control-label pt-2" style="font-size:20px;">Город</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="RecipientCity" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="RecipientStreet" class="control-label pt-2" style="font-size:20px;">Улица</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="RecipientStreet" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="RecipientHouseNumber" class="control-label pt-2" style="font-size:20px;">Номер дома</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="RecipientHouseNumber" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="RecipientCaseNumber" class="control-label pt-2" style="font-size:20px;">Корпус</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="RecipientCaseNumber" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="RecipientFlatNumber" class="control-label pt-2" style="font-size:20px;">Квартира</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="RecipientFlatNumber" disabled class="form-control" />
+            </div>
+
+            <br />
+            <h3 class="text-primary">Данные о грузе</h3>
+            <div class="col-2">
+                <label asp-for="CargoWeightStr" class="control-label pt-2" style="font-size:20px;">Вес, кг</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="CargoWeightStr" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="PickupDate" class="control-label pt-2" style="font-size:20px;">Дата забора груза</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="PickupDate" disabled class="form-control" />
+            </div>
+
+            <div class="col-5 offset-2">
+                <a asp-action="OrderIndex" class="btn-primary btn form-control ">Назад к списку</a>
+            </div>
+        </div>
+    </div>
+</form>
+

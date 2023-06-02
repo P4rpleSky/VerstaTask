@@ -1,0 +1,76 @@
+﻿@using VerstaTask.Models.Dtos;
+@model IEnumerable<OrderDto>
+
+<br />
+<br />
+<div class="container p-4 border">
+	<div class="row pb-2">
+		<div class="col-md-10">
+			<h1>Список заказов</h1>
+		</div>
+		<div class="col-md-2 text-end">
+			<a asp-action="OrderCreate" class="btn btn-outline-primary">Добавить новый заказ</a>
+		</div>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					Id
+				</th>
+				<th>
+					Город отправителя
+				</th>
+				<th>
+					Адрес отправителя
+				</th>
+				<th>
+					Город получателя
+				</th>
+				<th>
+					Адрес получателя
+				</th>
+				<th>
+					Вес груза, кг
+				</th>
+				<th>
+					Дата забора груза
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@item.Id
+					</td>
+					<td>
+						@item.SenderCity
+					</td>
+					<td>
+						@item.SenderAddress
+					</td>
+					<td>
+						@item.RecipientCity
+					</td>
+					<td>
+						@item.RecipientAddress
+					</td>
+					<td>
+						@item.CargoWeightStr
+					</td>
+					<td>
+						@item.PickupDate
+					</td>
+					<td>
+						<a asp-action="OrderInfo" class="btn btn-info" asp-route-orderId="@item.Id">
+							<i class="fas fa-eye"></i>
+						</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
